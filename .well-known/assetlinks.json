@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.alifbaa_git_main_add_4a12.twa",
+        "sha256_cert_fingerprints": ["4D:12:49:97:1A:BE:98:4B:FA:0B:3C:16:AD:70:E7:4A:21:79:CC:78:EC:8D:FF:AC:05:AC:89:5D:21:B3:C9:C3"]
+      }
+    }]
