@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6c5ce7">
+<meta name="description" content="لعبة ألف باء التعليمية للأطفال: تعلّم الحروف العربية من الألف إلى الياء بالصور والكلمات والاختبارات الممتعة. لعبة مجانية تعمل على الموبايل والكمبيوتر من المتصفح.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:site_name" content="ألف باء">
+<meta property="og:title" content="ألف باء | لعبة تعليم الحروف العربية للأطفال">
+<meta property="og:description" content="علّم طفلك الحروف العربية بالصوت والصور واللعب. ابدأ التعلّم مجانًا من المتصفح.">
+<meta name="twitter:card" content="summary">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>ألف باء | لعبة تعليم الحروف العربية للأطفال بالصوت والصور</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"ألف باء - لعبة الحروف العربية","alternateName":"Alif Baa","applicationCategory":"EducationalApplication","operatingSystem":"Any","inLanguage":"ar","description":"لعبة تعليمية مجانية تساعد الأطفال على تعلّم الحروف العربية من الألف إلى الياء من خلال الصور والكلمات والاختبارات التفاعلية.","offers":{"@type":"Offer","price":"0","priceCurrency":"EGP"},"isAccessibleForFree":true}
+</script>
+<style>
+:root{--purple:#6c5ce7;--pink:#ff7eb6;--yellow:#ffd166;--mint:#70e1c1;--ink:#27304b}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(135deg,#c9f3ff,#ffe1f0 55%,#fff1bd);color:var(--ink);min-height:100vh}
+header{padding:18px 16px 8px;text-align:center}h1{font-size:clamp(32px,7vw,48px);margin:4px 0;color:#5b46d6;text-shadow:0 3px 0 #fff}header p{margin:5px;font-size:16px}
+.wrap{max-width:850px;margin:auto;padding:10px 14px 30px}.card{background:#ffffffd9;border:3px solid #fff;border-radius:28px;padding:18px;box-shadow:0 9px 0 #8d7be655,0 15px 30px #433b7b18;margin:12px 0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.badge{background:#fff2b8;border-radius:18px;padding:10px 14px;font-weight:bold}
+button{font-family:inherit;border:0;border-radius:18px;padding:12px 16px;font-size:17px;font-weight:bold;cursor:pointer;box-shadow:0 5px 0 #00000015;transition:transform .12s}button:active{transform:translateY(3px);box-shadow:0 2px 0 #00000015}.primary{background:var(--purple);color:white}.secondary{background:#e4ddff;color:#4937bd}.yellow{background:var(--yellow);color:#654600}.mint{background:var(--mint);color:#145b4b}
+.nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}.letter-display{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;min-height:200px}
+.bigletter{font-size:clamp(100px,25vw,170px);font-weight:900;color:#6c5ce7;text-shadow:0 7px 0 #d4cbff;line-height:1}
+.animal{font-size:clamp(78px,18vw,120px);filter:drop-shadow(0 8px 3px #0002);animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(2deg)}}
+.word{font-size:30px;font-weight:900;color:#ed5b99;text-align:center;margin:4px}
+.hint{text-align:center;font-size:16px;color:#59617c}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.letter-btn{background:white;border:2px solid #e8e2ff;color:#5b46d6;font-size:28px;padding:10px 4px;border-radius:16px}.letter-btn.active{background:#dcd4ff;border-color:#6c5ce7}
+.quiz-options{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.option{font-size:48px;background:#fff;border:3px solid #f0eaff;padding:16px 4px}.message{text-align:center;font-size:20px;font-weight:bold;min-height:32px;margin:12px 0}.small{font-size:13px;color:#68708a;text-align:center;line-height:1.7}
+@media(max-width:480px){.grid{grid-template-columns:repeat(4,1fr)}.card{padding:14px}.quiz-options{gap:7px}.option{font-size:38px}}
+details{background:#fff;border:1px solid #eee7ff;border-radius:14px;padding:12px 14px;margin:9px 0}summary{font-weight:700;cursor:pointer;color:#4937bd}section[aria-labelledby="about-title"]{line-height:1.9}section[aria-labelledby="about-title"] h2,section[aria-labelledby="about-title"] h3{color:#4937bd}section[aria-labelledby="about-title"] a{color:#4937bd;font-weight:bold}
+</style></head>
+<body>
+<header><h1>🌈 ألف باء</h1><p>لعبة تعليم الحروف العربية للأطفال بالصوت والصور</p><p>نتعلّم الحروف ونلعب ونكسب نجوم! ⭐</p></header>
+<div class="wrap">
+<div class="card top"><div class="badge">⭐ نجومي: <span id="stars">0</span></div><div class="nav"><button class="primary" onclick="showTab('learn')">📚 اتعلّم الحروف</button><button class="yellow" onclick="showTab('quiz')">🎮 اختبر نفسك</button><button class="secondary" onclick="showTab('voice')">🎙️ صوت ماما</button></div></div>
+<section id="learn" class="card">
+<div class="letter-display"><div class="bigletter" id="bigletter">أ</div><div class="animal" id="emoji">🦁</div></div>
+<div class="word" id="word">ألف، أسد</div><div class="hint" id="hint">اضغط على السماعة لسماع الحرف والكلمة</div>
+<div class="nav" style="margin:14px 0"><button class="primary" onclick="speakCurrent()">🔊 اسمع</button><button class="secondary" onclick="previousLetter()">➡️ السابق</button><button class="mint" onclick="nextLetter()">التالي ⬅️</button></div>
+<div class="grid" id="letters"></div>
+</section>
+
+<section id="voice" class="card" hidden>
+  <h2 style="text-align:center;margin-top:0">🎙️ اتعلّم بصوت ماما</h2>
+  <p class="hint">سجّلي عيّنة واضحة بصوتك، وبعدها يقدر التطبيق يرسلها لخدمة استنساخ الصوت لإنشاء صوت مخصّص للتعلّم.</p>
+  <div class="card" style="background:#fff8fc">
+    <label style="display:flex;gap:10px;align-items:flex-start;line-height:1.7">
+      <input id="consent" type="checkbox" style="margin-top:7px;transform:scale(1.3)">
+      <span>أنا صاحبة الصوت، وأوافق على إرسال التسجيل إلى خدمة الصوت الخارجية لإنشاء نسخة صوتية. أفهم أن التسجيل سيغادر هذا الجهاز.</span>
+    </label>
+  </div>
+  <div class="nav" style="margin:12px 0">
+    <button class="primary" id="recordBtn" onclick="startRecording()">🔴 ابدئي التسجيل</button>
+    <button class="yellow" id="stopBtn" onclick="stopRecording()" disabled>⏹️ إيقاف</button>
+    <button class="secondary" onclick="playRecording()" id="playBtn" disabled>▶️ سماع التسجيل</button>
+  </div>
+  <div class="message" id="voiceStatus" role="status">استخدمي صوت شخص بالغ وبموافقته. التسجيل لا يُرفع إلا بعد الضغط على «إنشاء صوت ماما».</div>
+  <audio id="previewAudio" controls style="width:100%;display:none"></audio>
+  <button class="mint" id="cloneBtn" onclick="createMamaVoice()" disabled style="width:100%">✨ إنشاء صوت ماما بالذكاء الاصطناعي</button>
+  <div style="margin-top:14px">
+    <label for="testText" style="font-weight:bold;display:block;margin-bottom:6px">جرّبي نطق جملة:</label>
+    <input id="testText" value="ألف، أسد. باء، بطة. يلا نتعلّم الحروف!" maxlength="350" style="width:100%;padding:13px;border:2px solid #e8e2ff;border-radius:14px;font:inherit">
+    <button class="primary" onclick="speakTestText()" style="width:100%;margin-top:8px">🔊 اسمعي الجملة</button>
+  </div>
+  <p class="small">الاستنساخ الفعلي يحتاج خادمًا آمنًا ومفتاح API صالحًا لدى مزوّد الخدمة، وقد يترتب عليه اشتراك أو تكلفة. لا تضعي مفتاح API داخل ملفات المتصفح. هذه النسخة تجهّز التسجيل والربط، ولا تنشئ صوتًا مستنسخًا إلا بعد إعداد الخادم.</p>
+  <button class="secondary" onclick="showTab('learn')" style="width:100%">⬅️ الرجوع للحروف</button>
+</section>
+
+<section id="quiz" class="card" hidden>
+<h2 style="text-align:center;margin-top:0">🎯 اختار الصورة اللي بتبدأ بالحرف</h2>
+<div class="letter-display" style="min-height:100px"><div class="bigletter" id="quizletter">أ</div></div>
+<div class="quiz-options" id="options"></div><div class="message" id="message">جاهز؟ اختار الإجابة الصح!</div>
+<div class="nav"><button class="primary" onclick="newQuestion()">سؤال جديد 🔄</button></div>
+</section>
+<section class="card" aria-labelledby="about-title">
+<h2 id="about-title">تعلّم الحروف العربية للأطفال بطريقة ممتعة</h2>
+<p>ألف باء لعبة تعليمية مجانية تساعد طفلك على التعرّف على الحروف العربية من الألف إلى الياء. يضغط الطفل على الحرف ليستمع إلى اسمه وكلمة تبدأ به، ثم يختبر ما تعلّمه في لعبة اختيار الصورة الصحيحة.</p>
+<h3>ماذا سيتعلّم الطفل في لعبة ألف باء؟</h3>
+<ul>
+<li>التعرّف على أشكال الحروف العربية وترتيبها.</li>
+<li>ربط كل حرف بكلمة وصورة سهلة التذكّر، مثل: أ أسد، ب بطة، ت تفاحة.</li>
+<li>الاستماع إلى نطق الحروف والكلمات باللغة العربية.</li>
+<li>مراجعة الحروف من خلال اختبار تفاعلي ونظام نجوم تشجيعي.</li>
+</ul>
+<h3>الحروف العربية من الألف إلى الياء</h3>
+<p>ابدأ مع طفلك حرفًا حرفًا، واختر أي حرف من لوحة الحروف داخل اللعبة. يمكنك أيضًا فتح <a href="/learn/">دليل الحروف العربية للأطفال</a> للحصول على نشاط بسيط لكل حرف.</p>
+<h3>أسئلة شائعة عن تعليم الحروف</h3>
+<details><summary>ما العمر المناسب للعبة ألف باء؟</summary><p>يمكن للأهل استخدامها مع الأطفال في مرحلة ما قبل المدرسة وبداية تعلّم القراءة، مع مشاركة شخص بالغ ومراعاة مستوى كل طفل.</p></details>
+<details><summary>هل اللعبة مجانية؟</summary><p>يمكن تجربة تعلّم الحروف والاختبار مجانًا من المتصفح. أي خدمات صوت متقدمة أو محتوى إضافي قد تتوفر لاحقًا بشكل منفصل.</p></details>
+<details><summary>هل أحتاج إلى تحميل تطبيق؟</summary><p>لا، النسخة الحالية تعمل من متصفح حديث على الهاتف أو الكمبيوتر بعد نشر الموقع على الإنترنت.</p></details>
+<details><summary>هل تعمل اللعبة على الهاتف؟</summary><p>نعم، تصميم اللعبة متجاوب ويمكن استخدامها على شاشات الهواتف والأجهزة اللوحية والكمبيوتر.</p></details>
+</section>
+<div class="card"><div class="small">ألف باء — مساحة تعليمية تفاعلية لمساعدة الأطفال على تعلّم الحروف العربية. يُفضّل استخدام اللعبة بمشاركة ولي الأمر. الصوت التجريبي يعتمد على إمكانات الجهاز، وميزة صوت ماما تحتاج إعداد خدمة صوت مستقلة وموافقة صاحبة الصوت.</div></div>
+</div>
+<script>
+const data=[
+['أ','أسد','🦁'],['ب','بطة','🦆'],['ت','تفاحة','🍎'],['ث','ثعلب','🦊'],['ج','جمل','🐪'],['ح','حصان','🐴'],['خ','خروف','🐑'],['د','دب','🐻'],['ذ','ذرة','🌽'],['ر','رمان','🍎'],['ز','زرافة','🦒'],['س','سمكة','🐟'],['ش','شمس','☀️'],['ص','صقر','🦅'],['ض','ضفدع','🐸'],['ط','طائرة','✈️'],['ظ','ظبي','🦌'],['ع','عنب','🍇'],['غ','غيمة','☁️'],['ف','فراشة','🦋'],['ق','قطة','🐱'],['ك','كتاب','📘'],['ل','ليمون','🍋'],['م','موز','🍌'],['ن','نحلة','🐝'],['ه','هلال','🌙'],['و','وردة','🌹'],['ي','يد','✋']];
+let idx=0, stars=0, correctIndex=0;
+const $=id=>document.getElementById(id);
+function renderLetters(){ $('letters').innerHTML=data.map((x,i)=>`<button class="letter-btn ${i===idx?'active':''}" onclick="selectLetter(${i})">${x[0]}</button>`).join('');}
+function selectLetter(i){idx=i;let x=data[idx];$('bigletter').textContent=x[0];$('emoji').textContent=x[2];$('word').textContent=x[0]+'، '+x[1];$('hint').textContent='ده حرف '+x[0]+' زي '+x[1];renderLetters();}
+function nextLetter(){selectLetter((idx+1)%data.length)}function previousLetter(){selectLetter((idx+data.length-1)%data.length)}
+let mamaVoiceId = localStorage.getItem('alifBaaMamaVoiceId') || '';
+let recordedBlob = null, mediaRecorder = null, recordedChunks = [];
+function setVoiceStatus(msg){$('voiceStatus').textContent=msg;}
+async function startRecording(){
+  if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){setVoiceStatus('التسجيل يحتاج متصفحًا حديثًا واتصالًا آمنًا (HTTPS) أو localhost.');return;}
+  if(!$('consent').checked){setVoiceStatus('من فضلك وافقي على استخدام صوتك قبل التسجيل.');return;}
+  try{
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    recordedChunks=[];
+    const mimeType=MediaRecorder.isTypeSupported('audio/webm;codecs=opus')?'audio/webm;codecs=opus':'audio/webm';
+    mediaRecorder=new MediaRecorder(stream,{mimeType});
+    mediaRecorder.ondataavailable=e=>{if(e.data.size)recordedChunks.push(e.data);};
+    mediaRecorder.onstop=()=>{
+      recordedBlob=new Blob(recordedChunks,{type:mediaRecorder.mimeType||'audio/webm'});
+      $('previewAudio').src=URL.createObjectURL(recordedBlob);$('previewAudio').style.display='block';
+      $('playBtn').disabled=false;$('cloneBtn').disabled=false;
+      stream.getTracks().forEach(t=>t.stop());
+      setVoiceStatus('تم التسجيل. اسمعي العيّنة أولًا، ثم اضغطي «إنشاء صوت ماما» لإرسالها للخدمة.');
+    };
+    mediaRecorder.start();$('recordBtn').disabled=true;$('stopBtn').disabled=false;$('playBtn').disabled=true;$('cloneBtn').disabled=true;
+    setVoiceStatus('جاري التسجيل… اتكلمي بوضوح في مكان هادئ.');
+  }catch(e){setVoiceStatus('تعذّر فتح الميكروفون. راجعي إذن الميكروفون في المتصفح.');}
+}
+function stopRecording(){if(mediaRecorder && mediaRecorder.state!=='inactive'){mediaRecorder.stop();$('recordBtn').disabled=false;$('stopBtn').disabled=true;}}
+function playRecording(){if(recordedBlob){$('previewAudio').play();}}
+async function createMamaVoice(){
+  if(!recordedBlob){setVoiceStatus('سجّلي عيّنة صوت الأول.');return;}
+  if(!$('consent').checked){setVoiceStatus('الموافقة مطلوبة قبل إرسال التسجيل.');return;}
+  $('cloneBtn').disabled=true;setVoiceStatus('جاري إرسال التسجيل للخادم الآمن وإنشاء الصوت…');
+  try{
+    const fd=new FormData();fd.append('audio',recordedBlob,'mama-sample.webm');fd.append('consent','true');fd.append('voiceName','Mama - Alif Baa');
+    const r=await fetch('/api/clone-voice',{method:'POST',body:fd});
+    const j=await r.json();
+    if(!r.ok)throw new Error(j.error||'تعذّر إنشاء الصوت');
+    mamaVoiceId=j.voice_id;localStorage.setItem('alifBaaMamaVoiceId',mamaVoiceId);
+    setVoiceStatus('تم إنشاء صوت ماما بنجاح. جرّبي الجملة بالأسفل.');
+  }catch(e){setVoiceStatus('لم يكتمل الاستنساخ: '+e.message+'. تأكدي من تشغيل الخادم وإعداد ELEVENLABS_API_KEY.');}
+  finally{$('cloneBtn').disabled=false;}
+}
+async function speakWithMama(text){
+  const r=await fetch('/api/speak',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text,voiceId:mamaVoiceId})});
+  if(!r.ok){const j=await r.json().catch(()=>({}));throw new Error(j.error||'تعذّر توليد الصوت');}
+  const blob=await r.blob();const audio=new Audio(URL.createObjectURL(blob));await audio.play();
+}
+async function speakTestText(){
+  const text=$('testText').value.trim();if(!text)return;
+  if(!mamaVoiceId){speakDevice(text);setVoiceStatus('لم يتم إعداد صوت ماما المستنسخ بعد؛ تم استخدام صوت الجهاز للتجربة.');return;}
+  try{await speakWithMama(text);setVoiceStatus('تم تشغيل الجملة بصوت ماما المستنسخ.');}
+  catch(e){setVoiceStatus('تعذّر تشغيل الصوت المستنسخ: '+e.message);}
+}
+function speak(text){if(mamaVoiceId){speakWithMama(text).catch(()=>speakDevice(text));return;}speakDevice(text);}
+function speakDevice(text){if(!('speechSynthesis'in window)){ $('hint').textContent='الصوت غير مدعوم في هذا المتصفح';return;}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang='ar-EG';u.rate=.78;u.pitch=1.15;speechSynthesis.speak(u);}
+function speakCurrent(){let x=data[idx];speak(x[0]+'، '+x[1]);}
+function showTab(tab){$('learn').hidden=tab!=='learn';$('quiz').hidden=tab!=='quiz';$('voice').hidden=tab!=='voice';if(tab==='quiz')newQuestion();}
+function newQuestion(){correctIndex=Math.floor(Math.random()*data.length);$('quizletter').textContent=data[correctIndex][0];let ids=[correctIndex];while(ids.length<3){let n=Math.floor(Math.random()*data.length);if(!ids.includes(n))ids.push(n);}ids.sort(()=>Math.random()-.5);$('options').innerHTML=ids.map(i=>`<button class="option" aria-label="${data[i][1]}" onclick="answer(${i})">${data[i][2]}</button>`).join('');$('message').textContent='فين صورة '+data[correctIndex][1]+'؟';}
+function answer(i){if(i===correctIndex){stars++;$('stars').textContent=stars;$('message').textContent='برافو عليك! إجابة صحيحة ⭐';speak('برافو عليك! إجابة صحيحة');setTimeout(newQuestion,1200);}else{$('message').textContent='حاول مرة تانية، إنت تقدر! 💛';speak('حاول مرة تانية');}}
+renderLetters();selectLetter(0);
+</script></body></html>

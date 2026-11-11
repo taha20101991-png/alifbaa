@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /.env
+Disallow: /.mama-voice-id
+Disallow: /node_modules/
+
+# بعد اختيار الدومين، أضف رابط sitemap.xml هنا.
